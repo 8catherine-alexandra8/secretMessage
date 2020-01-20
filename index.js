@@ -9,6 +9,10 @@ document.querySelector('form').addEventListener('submit', (event) => {
 	//submission because I don't have a backend server.  It also
 	//stops page from refreshing upon submit
 	event.preventDefault();
+	//select the first message input card div and added the hide class
+	//which will cause it to disapear once the user clicks create/submits
+	//message
+	document.querySelector('#message-form').classList.add('hide');
 	//grab and store the message input text to the input variable
 	const input = document.querySelector('#message-input');
 	//encrypt string and save to new variable
