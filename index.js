@@ -17,7 +17,16 @@ document.querySelector('form').addEventListener('submit', (event) => {
 	//the link-input
 	//updated then encrypted value to a template literal referencing
 	//window.location, plus the encrypted message
-	document.querySelector(
-		'#link-input'
-	).value = `${window.location}#${encrypted}`;
+	//document.querySelector(
+	//	'#link-input'
+	//).value = `${window.location}#${encrypted}`;
+	//Rewriting query Selector above so that I can add code
+	//to autoselect link input text for easier copying by user
+	//Save link input to variable constant
+	const inputLink = document.querySelector('#link-input');
+	//set the value of the inputLink using template literal
+	//create full url
+	inputLink.value = `${window.location}#${encrypted}`;
+	//Use the select method to auto select the inputLink text/url
+	inputLink.select();
 });
