@@ -15,5 +15,9 @@ document.querySelector('form').addEventListener('submit', (event) => {
 	const encrypted = btoa(input.value);
 	//take the encrypted value created above and throw it into
 	//the link-input
-	document.querySelector('#link-input').vlaue = encrypted;
+	//updated then encrypted value to a template literal referencing
+	//window.location, plus the encrypted message
+	document.querySelector(
+		'#link-input'
+	).value = `${window.location}#${encrypted}`;
 });
