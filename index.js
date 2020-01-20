@@ -13,6 +13,9 @@ document.querySelector('form').addEventListener('submit', (event) => {
 	//which will cause it to disapear once the user clicks create/submits
 	//message
 	document.querySelector('#message-form').classList.add('hide');
+	//select the link card and remove hide class so that card shows
+	//as soon as user clicks create/submits message
+	document.querySelector('link-form').classList.remove('hide');
 	//grab and store the message input text to the input variable
 	const input = document.querySelector('#message-input');
 	//encrypt string and save to new variable
