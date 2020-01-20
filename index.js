@@ -9,4 +9,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
 	//submission because I don't have a backend server.  It also
 	//stops page from refreshing upon submit
 	event.preventDefault();
+	//grab and store the input text to the input variable
+	const input = document.querySelector('input');
+	console.log(input.value);
 });
