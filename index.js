@@ -9,7 +9,11 @@ document.querySelector('form').addEventListener('submit', (event) => {
 	//submission because I don't have a backend server.  It also
 	//stops page from refreshing upon submit
 	event.preventDefault();
-	//grab and store the input text to the input variable
-	const input = document.querySelector('input');
-	console.log(input.value);
+	//grab and store the message input text to the input variable
+	const input = document.querySelector('#message-input');
+	//encrypt string and save to new variable
+	const encrypted = btoa(input.value);
+	//take the encrypted value created above and throw it into
+	//the link-input
+	document.querySelector('#link-input').vlaue = encrypted;
 });
