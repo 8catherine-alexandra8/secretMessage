@@ -2,6 +2,14 @@
 //encrypted string
 const { hash } = window.location;
 
+//remove hash symbol from hash  property string and
+//save decoded message string, to new message variable
+const message = atob(has.replace('#', ''));
+
+//if there is a message, toggle the visibility between the message-form
+//and message-show
+if (message) {
+}
 //add event listener for when user clicks create on the form
 document.querySelector('form').addEventListener('submit', (event) => {
 	//as the second argument on event listener, pass in a callback
