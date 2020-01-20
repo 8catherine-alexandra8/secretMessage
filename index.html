@@ -16,6 +16,17 @@ centered in the browser-->
             <!--this class is going to make the content centered 
             on the screen-->
             <div class="col s8 offset-s2">
+                <!--add another div for the final decoded message card screen-->
+                <div id="message-show" class="card-panel hide">
+                    <!--add h1 element to act as placeholder for decoded message-->
+                    <h1></h1>
+                    <div>
+                        <!--add link for user to click if they want to create their
+                        own secret message.  This will reload the entire index.html, 
+                    removing any previous hash-->
+                        <a href="./index.html">Create your own secret message</a>
+                    </div>
+                </div>
                 <!--this class is going to give an element that looks
                 like a card, with a shadow behind it-->
                 <div id="message-form" class="card-panel">
