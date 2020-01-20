@@ -4,13 +4,13 @@ const { hash } = window.location;
 
 //remove hash symbol from hash  property string and
 //save decoded message string, to new message variable
-const message = atob(has.replace('#', ''));
+const message = atob(hash.replace('#', ''));
 
 //if there is a message, toggle the visibility between the message-form
 //and message-show
 if (message) {
 	document.querySelector('#message-form').classList.add('hide');
-	document.querySelector('message-show').classList.remove('hide');
+	document.querySelector('#message-show').classList.remove('hide');
 	//select h1 element and stick message inside of it
 	document.querySelector('h1').innerHTML = message;
 }
