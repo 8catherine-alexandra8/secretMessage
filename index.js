@@ -1,3 +1,7 @@
+//destructure the hash property from window.location to access the
+//encrypted string
+const { hash } = window.location;
+
 //add event listener for when user clicks create on the form
 document.querySelector('form').addEventListener('submit', (event) => {
 	//as the second argument on event listener, pass in a callback
