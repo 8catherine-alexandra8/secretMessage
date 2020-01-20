@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <!--most styling is happening via materialize, but adding a little
+    custom styling here so that the cards appear more vertically 
+centered in the browser.  ALso styled h1 so that there is less
+space between top of card and displayed message-->
+        <style>
+            .row {
+                margin-top: 25vh;
+            }
+            h1 {
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <!--this class is going to make the content centered 
+            on the screen-->
+            <div class="col s8 offset-s2">
+                <!--add another div for the final decoded message card screen-->
+                <div id="message-show" class="card-panel hide">
+                    <!--add h1 element to act as placeholder for decoded message-->
+                    <h1></h1>
+                    <div>
+                        <!--add link for user to click if they want to create their
+                        own secret message.  This will reload the entire index.html, 
+                    removing any previous hash-->
+                        <a href="./index.html">Create your own secret message</a>
+                    </div>
+                </div>
+                <!--this class is going to give an element that looks
+                like a card, with a shadow behind it-->
+                <div id="message-form" class="card-panel">
+                    <form>
+                        <label>Enter a Secret Message</label>
+                        <input id="message-input"/>
+                        <button class="btn">Create</button>
+                    </form>
+                </div>
+                <!--added div with card panel class so that url can display
+                the same way that original secret message displayed.  ALso adding
+            hide class from materialize css which can be used to set visibility to none-->
+                <div id="link-form" class="card-panel hide">
+<!--message to display to user after they enter a secret message 
+submit form-->
+                    <div>
+                     Share this link with a friend
+                     <!--this input will be selected and put in the encrypted
+                     string that we want the user to copy and share-->
+                     <input id="link-input"/>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+   
+</html>
