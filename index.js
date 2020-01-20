@@ -53,3 +53,5 @@ document.querySelector('form').addEventListener('submit', (event) => {
 	//Use the select method to auto select the inputLink text/url
 	inputLink.select();
 });
+//used now service to create public url for project so that app is
+//useable between multiple computers
