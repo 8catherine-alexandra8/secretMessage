@@ -9,6 +9,10 @@ const message = atob(has.replace('#', ''));
 //if there is a message, toggle the visibility between the message-form
 //and message-show
 if (message) {
+	document.querySelector('#message-form').classList.add('hide');
+	document.querySelector('message-show').classList.remove('hide');
+	//select h1 element and stick message inside of it
+	document.querySelector('h1').innerHTML = message;
 }
 //add event listener for when user clicks create on the form
 document.querySelector('form').addEventListener('submit', (event) => {
